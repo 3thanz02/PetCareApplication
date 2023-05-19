@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 // MainActivity2 is the name of new created EmptyActivity.
                 Intent intent = new Intent(MainActivity.this, MainActivity2.class);
                 startActivity(intent);
+                finish();
             }
         });
 
