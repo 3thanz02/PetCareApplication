@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
     ImageView dogInfo;
 
+    ImageView catInfo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
         // initialize imageView
         // with method findViewById()
         dogInfo = findViewById(R.id.dog);
+        catInfo = findViewById(R.id.cat);
+
 
         // Apply OnClickListener  to imageView to
         // switch from one activity to another
@@ -49,6 +53,20 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        catInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Intent class will help to go to next activity using
+                // it's object named intent.
+                // MainActivity2 is the name of new created EmptyActivity.
+                Intent intent = new Intent(MainActivity.this, CatInfomation.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
 
         if (user == null){
             Intent intent = new Intent(getApplicationContext(), login.class);

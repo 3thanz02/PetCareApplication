@@ -27,7 +27,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:paddingLeft="20dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
             >
 
             <TextView
@@ -52,13 +53,55 @@
                 />
 
             <TextView
-                android:id="@+id/developmentinfo"
+                android:id="@+id/developmentinfo1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dog Development Information"
+                android:text="Stage 1: Neonatal Period (0 – 2 weeks) - This is the first stage of puppy development and begins at birth. At this age, puppies only have the sense of taste and touch and rely totally on their mother."
                 android:textColor="@color/black"
                 android:textSize="15sp"
-                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/developmentinfo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stage 2: Transitional Period (2 – 4 weeks) - Sensory development continues with hearing and sense of smell. Puppy teeth start coming through and their eyes will begin to open. This is also the age where your puppy’s personality begins to develop. Puppies will interact with their litter mates, wag their tails, stand, walk a little and bark. "
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:paddingTop="10dp"
+
+                />
+
+            <TextView
+                android:id="@+id/developmentinfo3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stage 3: Socialization Period (3 – 12 weeks) -Between 3- 5 weeks puppies start to become aware of their surroundings and can develop a relationship with people. At the 7-9 weeks stage, they will have full use of all their senses and will be ready to go home to their new owners. This is a great period to begin crate training."
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:paddingTop="10dp"
+
+                />
+
+            <TextView
+                android:id="@+id/developmentinfo4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stage 4: Testing Period (3 – 6 months) - At this age your puppy is going to go through teething and chewing is a common side effect. Before your puppy starts chewing on your furniture: Don’t leave him unattended. Make sure he has plenty of chew sticks and toys. Use commercial sprays or gels that dissuade your puppy from chewing your belongings."
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:paddingTop="10dp"
+
+                />
+
+            <TextView
+                android:id="@+id/developmentinfo5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stage 5: Adolescence (6 – 18 months)- This can be the most difficult time during a puppy’s development – adolescence. Your cute little puppy is becoming a teenager and will start producing hormones which may result in changes in behaviour. Dogs go through adolescence much earlier than people; for small breeds, is can be as early as six months old while larger dogs starting at nine or 10 months of age. Adolescence in larger breed dogs continues until they are two or three years old with smaller dogs reaching maturity at about 18 months. Typically, the larger the dog, the slower the development. "
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:paddingTop="10dp"
                 />
 
             <TextView
@@ -71,14 +114,15 @@
                 android:textStyle="bold"
                 android:paddingTop="20dp"
                 />
+
             <TextView
                 android:id="@+id/dietinfo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dog Diet Information"
+                android:text="It is entirely acceptable to feed your dog a pure kibble diet. Or you can mix their diet up with some cooked or raw meat, fish, vegetables, and rice. Many owners like to feed a raw meat diet to their dogs, and while this can suit some dogs very well, there are some important considerations you need to be aware of."
                 android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
+                android:textSize="15sp"
+
                 />
 
             <TextView
@@ -96,10 +140,9 @@
                 android:id="@+id/traininginfo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dog Training Information"
+                android:text="Your regular grooming routine should include brushing, trimming (including the nails), and bathing. Grooming your dog has many benefits: It keeps their skin and coat shiny and healthy and for dogs with longer hair it can reduce matting that can cause skin problems."
                 android:textColor="@color/black"
                 android:textSize="15sp"
-                android:textStyle="bold"
                 />
 
 
