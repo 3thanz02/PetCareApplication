@@ -16,7 +16,7 @@
 
     <ScrollView
         android:layout_width="330dp"
-        android:layout_height="530dp"
+        android:layout_height="500dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="170dp"
         android:elevation="15dp"
@@ -118,12 +118,12 @@
 
     <ImageView
         android:id="@+id/dog"
-        android:layout_width="125dp"
-        android:layout_height="125dp"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
         android:layout_gravity="center"
         android:src="@drawable/dog"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="2dp"
         />
 
 
