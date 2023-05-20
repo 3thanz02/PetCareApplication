@@ -30,6 +30,12 @@ public class regitration extends AppCompatActivity {
     ProgressBar progressBar;
     TextView textView;
 
+    FirebaseDatabase rootNode;
+    DatabaseReference reference;
+
+
+
+
     @Override
     public void onStart() {
         super.onStart();
@@ -53,6 +59,7 @@ public class regitration extends AppCompatActivity {
         buttonReg = findViewById(R.id.btn_register);
         progressBar = findViewById(R.id.progressBar);
         textView = findViewById(R.id.loginNow);
+
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -103,6 +110,21 @@ public class regitration extends AppCompatActivity {
                             }
                         });
 
+
+
+                //goes into database
+                rootNode = FirebaseDatabase.getInstance();
+                //goes into users
+                reference = rootNode.getReference("users");
+
+
+                //get value of email types
+                String emailData = editTextEmail.getText().toString();
+
+                //sets email value into database
+                UserHelperClass helperClass = new UserHelperClass(emailData);
+
+                reference.setValue(helperClass);
 
             }
         });

@@ -132,4 +132,9 @@
     <string name="reminder_pic">reminder pic</string>
     <string name="logo">logo</string>
     <string name="logout_pic">logout pic</string>
+    <string name="pet_care">Pet Care</string>
+    <string name="user_details">User Details</string>
+    <string name="reminder_home">reminder home</string>
+    <string name="rem_home">Home</string>
+    <string name="user_id">User ID</string>
 </resources>

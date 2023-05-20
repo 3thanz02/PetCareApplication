@@ -19,12 +19,14 @@ public class MainActivity extends AppCompatActivity {
 
     FirebaseAuth auth;
     Button button;
-    TextView textView;
+    TextView textView, id;
     FirebaseUser user;
 
     ImageView dogInfo;
 
     ImageView catInfo;
+
+    ImageView reminderPage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,12 +41,15 @@ public class MainActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         button = findViewById(R.id.logout);
         textView = findViewById(R.id.user_details);
+        id = findViewById(R.id.user_id);
+
         user = auth.getCurrentUser();
 
         // initialize imageView
         // with method findViewById()
         dogInfo = findViewById(R.id.dog);
         catInfo = findViewById(R.id.cat);
+        reminderPage = findViewById(R.id.reminder);
 
 
         // Apply OnClickListener  to imageView to
@@ -73,6 +78,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        reminderPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Intent class will help to go to next activity using
+                // it's object named intent.
+                // MainActivity2 is the name of new created EmptyActivity.
+                Intent intent = new Intent(MainActivity.this, reminderActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
 
 
         if (user == null){
@@ -82,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         else{
+            //id.setText(user.getUid());
             textView.setText(user.getEmail());
         }
 

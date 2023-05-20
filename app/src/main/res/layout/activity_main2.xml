@@ -156,7 +156,7 @@
         android:layout_width="104dp"
         android:layout_height="49dp"
         android:text="@string/dog_home"
-        android:layout_alignParentBottom="true"
+        android:layout_marginTop="2dp"
         />
 
     <ImageView
