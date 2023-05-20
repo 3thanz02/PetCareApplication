@@ -24,7 +24,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
@@ -34,7 +34,7 @@
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cat Information"
+                android:text="@string/cat_info"
                 android:textColor="@color/black"
                 android:textSize="30sp"
                 android:textStyle="bold"
@@ -45,7 +45,7 @@
                 android:id="@+id/development"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cat Development"
+                android:text="@string/cat_development"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -55,7 +55,7 @@
                 android:id="@+id/developmentinfo1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Kittens (Birth up to 1 year)-Kittens have a very high play drive. Now is the best time for gradual positive introductions to people and other pets. It is also the right time for your cat to become comfortable with nail trims, tooth and coat brushing, their cat carrier, and transportation to the veterinary practice. "
+                android:text="@string/cat_dev_one"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 />
@@ -63,7 +63,7 @@
                 android:id="@+id/developmentinfo2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Young Adult (1 year – 6 years)-Inter-cat aggression may develop at this stage of life along with sexual maturity. Be sure to use appropriate play with your cat."
+                android:text="@string/cat_dev_two"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:paddingTop="10dp"
@@ -73,7 +73,7 @@
                 android:id="@+id/developmentinfo3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mature Adult (7 – 10 years)-Play activity begins to decrease, and your cat becomes more likely to gain weight. Many people assume their cat is young and healthy, but a lot can change in just one cat year which equals four human years. Your cat will benefit from regular check-ups to keep her/him healthy and prevent disease or illnesses."
+                android:text="@string/cat_dev_three"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:paddingTop="10dp"
@@ -83,7 +83,7 @@
                 android:id="@+id/developmentinfo4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Senior (over 10 years)-The human equivalent at the beginning of this life stage is about 60 years. Senior cats may exhibit behavioural changes (e.g., vocalization, changes in litter box usage, not going up and down stairs as easy). Senior cats should visit the veterinarian a minimum of every six months since much could happen in a year and your veterinarian can catch things early on before they are more advanced or costly to treat."
+                android:text="@string/cat_dev_five"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:paddingTop="10dp"
@@ -95,7 +95,7 @@
                 android:id="@+id/diet"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cat Diet"
+                android:text="@string/cat_diet"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -105,16 +105,16 @@
                 android:id="@+id/dietinfo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cats are obligate carnivores, which means that they rely on nutrients found only in animal products. Cats evolved as hunters that consume prey that contains high amounts of protein, moderate amounts of fat, and a minimal amount of carbohydrates, and their diet still requires these general proportions today."
+                android:text="@string/cat_diet_info"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="15sp"
                 />
 
             <TextView
                 android:id="@+id/training"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cat Training"
+                android:text="@string/cat_training"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -125,7 +125,7 @@
                 android:id="@+id/traininginfo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Training a cat is not much different than training a dog. By using positive reinforcement training, you're simply looking for what your cat finds motivating and what they'll work for. For many cats, this will likely be treats in the form of food, but some cats find play or praise incredibly motivating."
+                android:text="@string/cat_training_info"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 />
@@ -140,7 +140,7 @@
         android:id="@+id/home"
         android:layout_width="104dp"
         android:layout_height="49dp"
-        android:text="Home"
+        android:text="@string/cat_home"
         android:layout_alignParentBottom="true"
         />
 
@@ -152,6 +152,7 @@
         android:src="@drawable/cat"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="2dp"
+        android:contentDescription="@string/cat_pic"
         />
 
 </RelativeLayout>

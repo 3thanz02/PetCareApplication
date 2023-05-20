@@ -100,4 +100,36 @@
     </string>
     <string name="action_settings">Settings</string>
     <string name="Home" />
+    <string name="username">Username</string>
+    <string name="dog_information">Dog Information</string>
+    <string name="cat_information">Cat Information</string>
+    <string name="set_reminder">Set Reminder</string>
+    <string name="dog_pic">dog pic</string>
+    <string name="dog_info">Dog Information</string>
+    <string name="dog_development">Dog Development</string>
+    <string name="dog_dev_one">Stage 1: Neonatal Period (0 – 2 weeks) - This is the first stage of puppy development and begins at birth. At this age, puppies only have the sense of taste and touch and rely totally on their mother.</string>
+    <string name="dog_dev_two">Stage 2: Transitional Period (2 – 4 weeks) - Sensory development continues with hearing and sense of smell. Puppy teeth start coming through and their eyes will begin to open. This is also the age where your puppy’s personality begins to develop. Puppies will interact with their litter mates, wag their tails, stand, walk a little and bark.</string>
+    <string name="dog_dev_three">Stage 3: Socialization Period (3 – 12 weeks) -Between 3- 5 weeks puppies start to become aware of their surroundings and can develop a relationship with people. At the 7-9 weeks stage, they will have full use of all their senses and will be ready to go home to their new owners. This is a great period to begin crate training.</string>
+    <string name="dog_dev_four">Stage 4: Testing Period (3 – 6 months) - At this age your puppy is going to go through teething and chewing is a common side effect. Before your puppy starts chewing on your furniture: Don’t leave him unattended. Make sure he has plenty of chew sticks and toys. Use commercial sprays or gels that dissuade your puppy from chewing your belongings.</string>
+    <string name="dog_dev_five">Stage 5: Adolescence (6 – 18 months)- This can be the most difficult time during a puppy’s development – adolescence. Your cute little puppy is becoming a teenager and will start producing hormones which may result in changes in behaviour. Dogs go through adolescence much earlier than people; for small breeds, is can be as early as six months old while larger dogs starting at nine or 10 months of age. Adolescence in larger breed dogs continues until they are two or three years old with smaller dogs reaching maturity at about 18 months. Typically, the larger the dog, the slower the development.</string>
+    <string name="dog_diet">Dog Diet</string>
+    <string name="dog_diet_info">It is entirely acceptable to feed your dog a pure kibble diet. Or you can mix their diet up with some cooked or raw meat, fish, vegetables, and rice. Many owners like to feed a raw meat diet to their dogs, and while this can suit some dogs very well, there are some important considerations you need to be aware of.</string>
+    <string name="dog_training">Dog Training</string>
+    <string name="dog_training_info">Your regular grooming routine should include brushing, trimming (including the nails), and bathing. Grooming your dog has many benefits: It keeps their skin and coat shiny and healthy and for dogs with longer hair it can reduce matting that can cause skin problems.</string>
+    <string name="dog_home">Home</string>
+    <string name="cat_info">Cat Information</string>
+    <string name="cat_development">Cat Development</string>
+    <string name="cat_dev_one">Kittens (Birth up to 1 year)-Kittens have a very high play drive. Now is the best time for gradual positive introductions to people and other pets. It is also the right time for your cat to become comfortable with nail trims, tooth and coat brushing, their cat carrier, and transportation to the veterinary practice.</string>
+    <string name="cat_dev_two">Young Adult (1 year – 6 years)-Inter-cat aggression may develop at this stage of life along with sexual maturity. Be sure to use appropriate play with your cat.</string>
+    <string name="cat_dev_three">Mature Adult (7 – 10 years)-Play activity begins to decrease, and your cat becomes more likely to gain weight. Many people assume their cat is young and healthy, but a lot can change in just one cat year which equals four human years. Your cat will benefit from regular check-ups to keep her/him healthy and prevent disease or illnesses.</string>
+    <string name="cat_dev_five">Senior (over 10 years)-The human equivalent at the beginning of this life stage is about 60 years. Senior cats may exhibit behavioural changes (e.g., vocalization, changes in litter box usage, not going up and down stairs as easy). Senior cats should visit the veterinarian a minimum of every six months since much could happen in a year and your veterinarian can catch things early on before they are more advanced or costly to treat.</string>
+    <string name="cat_diet">Cat Diet</string>
+    <string name="cat_diet_info">Cats are obligate carnivores, which means that they rely on nutrients found only in animal products. Cats evolved as hunters that consume prey that contains high amounts of protein, moderate amounts of fat, and a minimal amount of carbohydrates, and their diet still requires these general proportions today.</string>
+    <string name="cat_training">Cat Training</string>
+    <string name="cat_training_info">Training a cat is not much different than training a dog. By using positive reinforcement training, you\'re simply looking for what your cat finds motivating and what they\'ll work for. For many cats, this will likely be treats in the form of food, but some cats find play or praise incredibly motivating.</string>
+    <string name="cat_home">Home</string>
+    <string name="cat_pic">cat pic</string>
+    <string name="reminder_pic">reminder pic</string>
+    <string name="logo">logo</string>
+    <string name="logout_pic">logout pic</string>
 </resources>

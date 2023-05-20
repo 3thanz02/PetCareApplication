@@ -18,6 +18,8 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class regitration extends AppCompatActivity {
 
@@ -77,6 +79,7 @@ public class regitration extends AppCompatActivity {
                     Toast.makeText(regitration.this, "Enter password", Toast.LENGTH_SHORT).show();
                     return;
                 }
+
 
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
