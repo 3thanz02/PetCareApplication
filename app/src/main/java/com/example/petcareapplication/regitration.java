@@ -23,29 +23,25 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class regitration extends AppCompatActivity {
 
-
+    // declare variables
     TextInputEditText editTextEmail, editTextPassword;
     Button buttonReg;
     FirebaseAuth mAuth;
     ProgressBar progressBar;
     TextView textView;
-
     FirebaseDatabase rootNode;
     DatabaseReference reference;
-
-
-
 
     @Override
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
+        // If user is signed in then when opening app they will not have to login or register
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser != null) {
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(intent);
             finish();
-
         }
     }
 
@@ -53,6 +49,8 @@ public class regitration extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_regitration);
+
+        // declare variables
         mAuth = FirebaseAuth.getInstance();
         editTextEmail = findViewById(R.id.email);
         editTextPassword = findViewById(R.id.password);
@@ -60,6 +58,7 @@ public class regitration extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
         textView = findViewById(R.id.loginNow);
 
+        // loginNow text view navigates to the login page when clicked
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,6 +68,7 @@ public class regitration extends AppCompatActivity {
             }
         });
 
+        // OnClickListener when the Registration button is Clicked by user
         buttonReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,30 +77,33 @@ public class regitration extends AppCompatActivity {
                 email = String.valueOf(editTextEmail.getText());
                 password = String.valueOf(editTextPassword.getText());
 
+                //checks if email is empty
                 if (TextUtils.isEmpty(email)){
                     Toast.makeText(regitration.this, "Enter email", Toast.LENGTH_SHORT).show();
                     return;
                 }
-
+                // Checks if password is empty
                 if (TextUtils.isEmpty(password)){
                     Toast.makeText(regitration.this, "Enter password", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-
+                //authenticates the user
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
+                                // Activates progress bar
                                 progressBar.setVisibility(View.GONE);
+
+                                //Checks if authentication succeeded
                                 if (task.isSuccessful()) {
+                                    // If sign in succeeds, display a message to the user.
                                     Toast.makeText(regitration.this, "Account Created.",
                                             Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(getApplicationContext(), login.class);
                                     startActivity(intent);
                                     finish();
-
-
                                 } else {
                                     // If sign in fails, display a message to the user.
                                     Toast.makeText(regitration.this, "Authentication failed.",
@@ -110,22 +113,19 @@ public class regitration extends AppCompatActivity {
                             }
                         });
 
-
-
                 //goes into database
                 rootNode = FirebaseDatabase.getInstance();
                 //goes into users
                 reference = rootNode.getReference("users");
 
-
                 //get value of email types
                 String emailData = editTextEmail.getText().toString();
 
-                //sets email value into database
+                //creates value that will be added into database
                 UserHelperClass helperClass = new UserHelperClass(emailData);
 
+                //adds value into database
                 reference.setValue(helperClass);
-
             }
         });
     }

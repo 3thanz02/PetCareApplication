@@ -20,6 +20,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class login extends AppCompatActivity {
+
+    // Declare variables
     TextInputEditText editTextEmail, editTextPassword;
     Button buttonLogin;
     FirebaseAuth mAuth;
@@ -30,6 +32,7 @@ public class login extends AppCompatActivity {
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
+        // If user is signed in then when opening app they will not have to login or register.
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if(currentUser != null){
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
@@ -43,6 +46,8 @@ public class login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        // declare variables
         mAuth = FirebaseAuth.getInstance();
         editTextEmail = findViewById(R.id.email);
         editTextPassword = findViewById(R.id.password);
@@ -50,6 +55,7 @@ public class login extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
         textView = findViewById(R.id.registerNow);
 
+        // 'Register Now' text view navigates to the login page when clicked
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,6 +65,7 @@ public class login extends AppCompatActivity {
             }
         });
 
+        // OnClickListener when the Registration button is Clicked by user
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,30 +74,35 @@ public class login extends AppCompatActivity {
                 email = String.valueOf(editTextEmail.getText());
                 password = String.valueOf(editTextPassword.getText());
 
+                //checks if email is empty
                 if (TextUtils.isEmpty(email)){
                     Toast.makeText(login.this, "Enter email", Toast.LENGTH_SHORT).show();
                     return;
                 }
-
+                // Checks if password is empty
                 if (TextUtils.isEmpty(password)){
                     Toast.makeText(login.this, "Enter password", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
+                //authenticates the user
                 mAuth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
+                                // Activates progress bar
                                 progressBar.setVisibility(View.GONE);
 
+                                //Checks if authentication succeeded.
                                 if (task.isSuccessful()) {
+                                    // If sign in succeeds, display message to user.
                                     Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
+                                    // navigates to MainActivity page.
                                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                     startActivity(intent);
                                     finish();
-
+                                    // If sign in fails, display a message to the user.
                                 } else {
-
                                     Toast.makeText(login.this, "Authentication failed.",
                                             Toast.LENGTH_SHORT).show();
 

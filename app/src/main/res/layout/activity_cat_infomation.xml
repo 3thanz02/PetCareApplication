@@ -6,13 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2"
     android:orientation="vertical">
-
+    <!-- A view that separates the image and home button from the scroll view  -->
     <View
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@drawable/bg_view">
     </View>
-
+    <!-- A scroll view that holds information regarding cats -->
     <ScrollView
         android:layout_width="330dp"
         android:layout_height="500dp"
@@ -21,7 +21,6 @@
         android:elevation="15dp"
         android:background="@drawable/curved_scrollview"
         android:fillViewport="true">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -29,7 +28,7 @@
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
             >
-
+            <!-- the title text view  -->
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
@@ -40,7 +39,7 @@
                 android:textStyle="bold"
                 android:layout_gravity="center"
                 />
-
+            <!-- Cat Development heading Text View  -->
             <TextView
                 android:id="@+id/development"
                 android:layout_width="wrap_content"
@@ -50,7 +49,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 />
-
+            <!-- Cat Development1 information Text View  -->
             <TextView
                 android:id="@+id/developmentinfo1"
                 android:layout_width="wrap_content"
@@ -59,6 +58,7 @@
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 />
+            <!-- Cat Development2 information Text View  -->
             <TextView
                 android:id="@+id/developmentinfo2"
                 android:layout_width="wrap_content"
@@ -68,7 +68,7 @@
                 android:textSize="15sp"
                 android:paddingTop="10dp"
                 />
-
+            <!-- Cat Development3 information Text View  -->
             <TextView
                 android:id="@+id/developmentinfo3"
                 android:layout_width="wrap_content"
@@ -78,7 +78,7 @@
                 android:textSize="15sp"
                 android:paddingTop="10dp"
                 />
-
+            <!-- Cat Development4 information Text View  -->
             <TextView
                 android:id="@+id/developmentinfo4"
                 android:layout_width="wrap_content"
@@ -88,9 +88,7 @@
                 android:textSize="15sp"
                 android:paddingTop="10dp"
                 />
-
-
-
+            <!-- Cat Diet Heading Text View  -->
             <TextView
                 android:id="@+id/diet"
                 android:layout_width="wrap_content"
@@ -101,6 +99,7 @@
                 android:textStyle="bold"
                 android:paddingTop="20dp"
                 />
+            <!-- Cat Diet Information Text View  -->
             <TextView
                 android:id="@+id/dietinfo"
                 android:layout_width="wrap_content"
@@ -109,7 +108,7 @@
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 />
-
+            <!-- Cat Training Heading Text View  -->
             <TextView
                 android:id="@+id/training"
                 android:layout_width="wrap_content"
@@ -120,7 +119,7 @@
                 android:textStyle="bold"
                 android:paddingTop="20dp"
                 />
-
+            <!-- Cat Training Information Text View  -->
             <TextView
                 android:id="@+id/traininginfo"
                 android:layout_width="wrap_content"
@@ -129,14 +128,9 @@
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 />
-
-
         </LinearLayout>
-
-
     </ScrollView>
-
-
+    <!-- Image View for Cat Information Page.  -->
     <ImageView
         android:id="@+id/dog"
         android:layout_width="165dp"
@@ -147,6 +141,7 @@
         android:layout_marginTop="2dp"
         android:contentDescription="@string/cat_pic"
         />
+    <!-- Home button for Cat Information Page  -->
     <Button
         android:id="@+id/home"
         android:layout_width="104dp"
@@ -154,7 +149,5 @@
         android:text="@string/cat_home"
         android:layout_marginTop="2dp"
         />
-
-
 </RelativeLayout>
 
