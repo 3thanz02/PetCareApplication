@@ -14,7 +14,6 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 public class MainActivity extends AppCompatActivity {
-
     // declare variables
     FirebaseAuth auth;
     Button button;
@@ -23,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
     ImageView dogInfo;
     ImageView catInfo;
     ImageView reminderPage;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

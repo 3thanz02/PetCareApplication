@@ -137,4 +137,6 @@
     <string name="reminder_home">reminder home</string>
     <string name="rem_home">Home</string>
     <string name="user_id">User ID</string>
+    <string name="set">Set</string>
+    <string name="cancel">Cancel</string>
 </resources>

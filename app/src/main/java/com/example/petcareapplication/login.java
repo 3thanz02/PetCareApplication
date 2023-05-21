@@ -1,5 +1,4 @@
 package com.example.petcareapplication;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,16 +17,13 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
 public class login extends AppCompatActivity {
-
     // Declare variables
     TextInputEditText editTextEmail, editTextPassword;
     Button buttonLogin;
     FirebaseAuth mAuth;
     ProgressBar progressBar;
     TextView textView;
-
     @Override
     public void onStart() {
         super.onStart();
@@ -38,15 +34,12 @@ public class login extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(intent);
             finish();
-
         }
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         // declare variables
         mAuth = FirebaseAuth.getInstance();
         editTextEmail = findViewById(R.id.email);
@@ -54,7 +47,6 @@ public class login extends AppCompatActivity {
         buttonLogin = findViewById(R.id.btn_login);
         progressBar = findViewById(R.id.progressBar);
         textView = findViewById(R.id.registerNow);
-
         // 'Register Now' text view navigates to the login page when clicked
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,7 +56,6 @@ public class login extends AppCompatActivity {
                 finish();
             }
         });
-
         // OnClickListener when the Registration button is Clicked by user
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,7 +64,6 @@ public class login extends AppCompatActivity {
                 String email, password;
                 email = String.valueOf(editTextEmail.getText());
                 password = String.valueOf(editTextPassword.getText());
-
                 //checks if email is empty
                 if (TextUtils.isEmpty(email)){
                     Toast.makeText(login.this, "Enter email", Toast.LENGTH_SHORT).show();
@@ -84,7 +74,6 @@ public class login extends AppCompatActivity {
                     Toast.makeText(login.this, "Enter password", Toast.LENGTH_SHORT).show();
                     return;
                 }
-
                 //authenticates the user
                 mAuth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -92,7 +81,6 @@ public class login extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 // Activates progress bar
                                 progressBar.setVisibility(View.GONE);
-
                                 //Checks if authentication succeeded.
                                 if (task.isSuccessful()) {
                                     // If sign in succeeds, display message to user.
@@ -105,11 +93,9 @@ public class login extends AppCompatActivity {
                                 } else {
                                     Toast.makeText(login.this, "Authentication failed.",
                                             Toast.LENGTH_SHORT).show();
-
                                 }
                             }
                         });
-
             }
         });
     }

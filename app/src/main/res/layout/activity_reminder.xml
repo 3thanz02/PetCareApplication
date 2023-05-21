@@ -7,53 +7,46 @@
     tools:context=".reminderActivity"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    android:padding="10dp"
-    >
-
+    android:padding="10dp">
+    <!--allows user to enter the message they want to be reminded of-->
     <EditText
         android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="enter your task"
         android:layout_marginBottom="20dp"/>
-
+    <!--  displays current time and lets the user
+     select the time you want your reminder to be sent -->
     <TimePicker
         android:id="@+id/timePicker"
         android:layout_width="200dp"
         android:layout_height="342dp"/>
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:layout_marginTop="30dp">
-
+        <!-- lets the user set the time -->
         <Button
             android:id="@+id/setBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Set"
-            android:layout_marginRight="20dp"
+            android:text="@string/set"
+            android:layout_marginEnd="20dp"
             />
-
+        <!-- lets the user cancel the created reminder  -->
         <Button
             android:id="@+id/cancelBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cancel"
+            android:text="@string/cancel"
             />
-
-
-
     </LinearLayout>
-
+    <!-- reminderActivitie's home button  -->
     <Button
         android:id="@+id/home"
         android:layout_width="104dp"
         android:layout_height="49dp"
         android:text="@string/rem_home"
         />
-
-
 </LinearLayout>

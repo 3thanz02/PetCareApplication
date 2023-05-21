@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2"
     android:orientation="vertical">
-
     <!-- A view that separates the image and home button from the scroll view  -->
     <View
         android:layout_width="match_parent"
@@ -22,7 +21,6 @@
         android:elevation="15dp"
         android:background="@drawable/curved_scrollview"
         android:fillViewport="true">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,7 +28,6 @@
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
             >
-
             <!-- the title text view  -->
             <TextView
                 android:id="@+id/textView4"
@@ -42,7 +39,6 @@
                 android:textStyle="bold"
                 android:layout_gravity="center"
                 />
-
             <!-- Dog Development heading Text View  -->
             <TextView
                 android:id="@+id/development"
@@ -113,7 +109,6 @@
                 android:textStyle="bold"
                 android:paddingTop="20dp"
                 />
-
             <!-- Dog Diet Information Text View  -->
             <TextView
                 android:id="@+id/dietinfo"
@@ -145,7 +140,6 @@
                 />
         </LinearLayout>
     </ScrollView>
-
     <!-- Home button for Dog Information Page  -->
     <Button
         android:id="@+id/home"
@@ -154,7 +148,6 @@
         android:text="@string/dog_home"
         android:layout_marginTop="2dp"
         />
-
     <!-- Image View for Dog Information Page.  -->
     <ImageView
         android:id="@+id/dog"
